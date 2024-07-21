@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <style>
+        .hover-effect:hover {
+            background-color: black !important;
+            transition: background-color 0.30s;
+        }
+        .mobile_view {
+            display: none;
+        }
+        section {
+            background-color: #f8f9fa;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+        @media only screen and (max-width: 600px) {
+            body {
+                background-color: rgb(0, 0, 0);
+            }
+            .mobile_view {
+                bottom: 0;
+                display: block;
+            }
+            .hover-effect:hover {
+                background-color: rgb(9, 139, 9) !important;
+                transition: background-color 0.30s;
+            }
+            section {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid p-5 bg-primary text-center text-white hover-effect">
+        <h1>ABOUT ME</h1>
+    </div>
+    <div class="container-fluid pt-5 text-center">
+        <div class="display-1"> 
+            faseed
+        </div>
+        I'm a web developer and a student of tech.
+    </div>
+    <footer class="blockquote-footer text-center"> <code> the beginning of developer era </code> </footer>
+    <section class="text-center ">
+        <blockquote> <button class="btn btn-outline-danger" id="exitButton">Click to Exit</button>  </blockquote>
+    </section>
+    <div class="container text-center">
+        <div class="container-fluid mobile_view" style="text-align: center;">
+            This web may look better on PC or desktop.
+        </div>
+    </div>
+    <div class="container-fluid text-center mt-5">
+        <a href="https://github.com/mrfaseed" style="list-style-type: none;">Follow on GitHub?</a>
+    </div>
+
+    <script>
+        document.getElementById('exitButton').addEventListener('click', function() {
+            window.open('', '_self', ''); 
+            window.close();
+        });
+    </script>
+</body>
+</html>
